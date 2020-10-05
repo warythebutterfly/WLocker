@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>Wlocler | Admin</title>
+    <link href="~/Content/bootstrap.mini.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    @*<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">*@
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/signin.css" rel="stylesheet" />
+    @*<link href="signin.css" rel="stylesheet">*@
+</head>
+
+<body class="text-center">
+   
+    <form id="loginForm" class="form-signin">
+        <img src="~/Content/images/icons/wlockerlogo.png" />
+        <br />
+        <br />
+        
+        <h3 class="h3 mb-3 font-weight-normal">Wlocker · Admin</h3>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="text" id="email" class="form-control" placeholder="Email-Address" @*required autofocus*@>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit"><i class="fa fa-sign-in"></i>Sign in</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+</form>
+</body>
+</html>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    $("#loginForm").submit(function (e) {
+        e.preventDefault();
+
+        var email = $("#email").val()
+        var password = $("#password").val()
+
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Home/Login',
+            data: { "email": email, "password": password },
+            success: function (data) {
+                if (data == "1") {
+                    //alert('Login Successful!');
+                    window.location.href = "/Home/Dashboard";
+                }
+                else {
+                    alert('Oops! Your email address or password is incorrect.');
+                    $("#password").val("")
+                }
+                
+                
+            },
+            
+            error: function (x, e) {
+               
+            }
+            
+        });
+
+
+    })
+</script>

@@ -1,0 +1,178 @@
+﻿@model OnlineStore.Models.ViewModel
+@{
+    ViewBag.Title = "Item";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<head>
+    <title>
+    </title>
+    @*<link href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
+    <script src="~/Content/js/jqueryajax.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<h2>Items</h2>
+<br />
+<div>
+    <input type="text" class="form-control w-75" id="myInput1" style="border: 2px solid; border-color: #f2f2f2" placeholder="Search" aria-label="Search" /><a style="float:right" href="/Items/AddItems" class="btn btn-success">Add item</a>
+
+</div>
+@*<input type="text" class="form-control w-75" id="myInput1" style="border: 2px solid; border-color: #f2f2f2" placeholder="Search" aria-label="Search" />
+
+<a href="/Items/AddItems" class="btn btn-success">Add item</a>*@
+<br />
+<br />
+
+<table class="table table-bordered" style="width: 100%;  border: hidden; ">
+    <thead>
+        <tr style="color: #686461">
+            <th>Name</th>
+            <th>Price (₦)</th>
+            <th>Image</th>
+            <th>Item Description</th>
+            @*<th>Category ID</th>*@
+            <th>Availability</th>
+
+            <th> <span style="padding:15px">Action</span></th>
+        </tr>
+    </thead>
+    @foreach (var i in Model.item)
+    {
+        <tbody id="myTable">
+            <tr style=" font-size:medium">
+                <td><b>@i.Name</b></td>
+                <td>@Model.FormattedAmount(i.Price)</td>
+                <td><img src="@i.ImageURL" height="200" /></td>
+                <td>@i.ItemDescription</td>
+                @*<td>@i.CategoryID</td>*@
+                <td>@Html.Raw(Model.GetAvailability(i.Availability))</td>
+                <td style="width:10%">
+                    <a href="/Items/EditItems/@i.ID" class="btn btn-primary" title="Edit Item"><i class="far fa-edit"></i></a>
+                    <span style="padding:3px"></span>
+                    @*<a href="/Items/DeleteItems/@i.ID" class="btn btn-danger" title="Delete"><i class="far fa-trash-alt"></i></a>*@
+                    <!-- Trigger the modal with a button -->
+                    @*<button type="button" onclick="editItem(@i.ID);" class="btn btn-info btn-group-lg btn btn-primary" data-toggle="modal" data-target="#MyModal"><i class="far fa-edit"></i></button>*@
+                    <button type="button" onclick="deleteItem(@i.ID);" class="btn btn-info btn-group-lg btn btn-danger" title="Delete Item" data-toggle="modal" data-target="myModal"><i class="far fa-trash-alt"></i></button>
+
+
+
+
+
+                </td>
+            </tr>
+        </tbody>
+    }
+
+</table>
+
+
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                <h4 class="modal-title" style="font-size:xx-large"><i style="color:#FFDD00" class="fas fa-exclamation-triangle"></i></h4>
+            </div>
+            <div class="modal-body">
+                <p style="font-family:'Segoe UI'; font-size:large; text-align:center">Are you sure you want to delete <span style="font-weight:bold" id="name"></span>?</p>
+
+
+            </div>
+            <div class="modal-footer">
+
+                <button id="delbtn" type="button" class="btn btn-success" title="Yes, delete!" data-dismiss="modal">Yes <i class="fas fa-thumbs-up"></i></button>
+                <button type="button" class="btn btn-danger" title="No!" data-dismiss="modal">No <i class="fas fa-thumbs-down"></i></button>
+                <input type="hidden" id="hidden" value="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#myInput1").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+    //this is to make the delete button in the modal work and save changes in the server
+    $("#delbtn").click(function () {
+        var id = $("#hidden").val()
+
+
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Items/Delete',
+            data: {
+                "id": id
+
+
+
+
+            },
+            success: function (data) {
+
+
+                alert(data);
+                window.location.href = "/Items/Item";
+            },
+
+            error: function (x, e) { }
+
+
+
+        })
+    })
+
+    //this is to get the id of the item and send it to the controller
+
+    function deleteItem(id) {
+
+        $("#hidden").val(id);
+        //var id = $("#hidden").val();
+
+
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Items/GetItem',
+            data: {
+                "ItemId": id,
+
+            },
+            success: function (data) {
+
+                // this is to get the name of the item which the id was passed to the controller
+
+                console.log(data);
+
+                $("#name").text(data.Name);
+            },
+            error: function (x, e) {
+
+            }
+        });
+    }
+</script>
+
+

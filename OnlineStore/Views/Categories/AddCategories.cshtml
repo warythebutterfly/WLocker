@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "AddCategories";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br /><br /><br />
+<h2>Add a new category here <i class="fa fa-arrow-down"></i></h2><br />
+
+<form id="form">
+
+    <input type="text" id="Cname" class="form-control" style="width:20%" placeholder="Category Name" /><br />
+
+    <button type="button" id="btn" class="btn btn-success">Add</button>
+</form>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $("#btn").click(function () {
+       
+
+        var cname = $("#Cname").val()
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/AddCategories',
+            data: {
+                "cname": cname
+
+            },
+            success: function (data) {
+
+                $("#Cname").val("")
+
+                alert(data);
+                window.location.href = "/Categories/categories";
+            },
+
+            error: function (x, e) { }
+
+
+
+        })
+
+    })
+
+</script>

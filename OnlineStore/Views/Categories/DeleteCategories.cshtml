@@ -1,0 +1,39 @@
+﻿@*@model OnlineStore.Models.Category
+
+@{
+    ViewBag.Title = "DeleteCategories";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Delete Categories</h2><br />
+
+Are you sure you want to delete <b>@Model.CategoryName</b>? <br /><br />
+<button id="delbtn" class="btn btn-primary">Yes</button>
+<a href="/Categories/categories" class="btn btn-danger">No</a>
+<input type="hidden" id="hidden" value="@Model.ID" />
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $("#delbtn").click(function () {
+
+        var id = $("#hidden").val()
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+
+            url: '/Categories/Delete',
+            data: { "id": id },
+            success: function (data) {
+
+                alert(data);
+                window.location.href = "/Categories/categories";
+            },
+            error: function (x, e) {
+
+            }
+        });
+    })
+</script>*@

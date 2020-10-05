@@ -1,0 +1,169 @@
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\OnlineStore.dll.config
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\OnlineStore.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\OnlineStore.pdb
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Antlr3.Runtime.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\EntityFramework.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\EntityFramework.SqlServer.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Google.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Web.Infrastructure.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Newtonsoft.Json.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Owin.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Helpers.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Mvc.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Optimization.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Razor.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.WebPages.Deployment.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.WebPages.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.WebPages.Razor.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\WebGrease.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Helpers.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Mvc.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Optimization.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.Razor.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.WebPages.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.WebPages.Deployment.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\System.Web.WebPages.Razor.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Newtonsoft.Json.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Antlr3.Runtime.pdb
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\EntityFramework.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\EntityFramework.SqlServer.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Google.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csprojResolveAssemblyReference.cache
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\obj\Debug\OnlineStore.dll
+c:\users\temit\documents\visual studio 2013\Projects\OnlineStore\OnlineStore\obj\Debug\OnlineStore.pdb
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\OnlineStore.dll.config
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\OnlineStore.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\OnlineStore.pdb
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Antlr3.Runtime.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\EntityFramework.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\EntityFramework.SqlServer.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Newtonsoft.Json.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Owin.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Helpers.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Mvc.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Optimization.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Razor.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.WebPages.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\WebGrease.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Helpers.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Mvc.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Optimization.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.Razor.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.WebPages.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Newtonsoft.Json.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Antlr3.Runtime.pdb
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\EntityFramework.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\EntityFramework.SqlServer.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csprojAssemblyReference.cache
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csproj.CoreCompileInputs.cache
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csproj.CopyComplete
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\obj\Debug\OnlineStore.dll
+C:\Users\temit\Desktop\OnlineStore\OnlineStore\obj\Debug\OnlineStore.pdb
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\OnlineStore.dll.config
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\OnlineStore.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\OnlineStore.pdb
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Antlr3.Runtime.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\EntityFramework.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\EntityFramework.SqlServer.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Newtonsoft.Json.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Owin.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Helpers.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Mvc.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Optimization.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Razor.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.WebPages.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\WebGrease.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Helpers.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Mvc.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Optimization.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.Razor.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.WebPages.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Newtonsoft.Json.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Antlr3.Runtime.pdb
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\EntityFramework.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\EntityFramework.SqlServer.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csprojAssemblyReference.cache
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csproj.CopyComplete
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\obj\Debug\OnlineStore.dll
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\obj\Debug\OnlineStore.pdb
+C:\Users\temit\source\repos\OnlineStore\OnlineStore\obj\Debug\OnlineStore.csproj.CoreCompileInputs.cache

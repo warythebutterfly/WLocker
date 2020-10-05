@@ -1,0 +1,295 @@
+﻿@model OnlineStore.Models.ViewModel
+@{
+    ViewBag.Title = "categories";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<head>
+    <title>
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    
+    <h2>Categories</h2><br />
+
+    @*<a href="/Categories/AddCategories" class="btn btn-success" style="font-family:'Segoe UI'">Add Category</a>*@
+    <button type="button" onclick="addCategory" class="btn btn-success btn-group-sm" data-toggle="modal" data-target="#MYModal" style="font-family: 'Segoe UI'">Add Category</button><br /><br />
+    <table class="table table-bordered" style="width: 50%;  border: hidden; ">
+        <tr style="color: #686461">
+            <th>S/N</th>
+            <th>Category Name</th>
+            <th><span style="padding:10px"></span>Action</th>
+        </tr>
+        @foreach (var item in Model.ctgry)
+        {
+
+            var sum = Model.ctgry.IndexOf(item) + 1;
+
+            <tr style=" font-size:medium">
+                <td>@sum</td>
+                <td>@item.CategoryName</td>
+                <td>
+                    @*<a href="/Categories/EditCategories/@item.ID" class="btn btn-primary btn-group-sm" title="Edit"><i class="far fa-edit"></i></a>*@
+                    @*<a href="/Categories/DeleteCategories/@item.ID" class="btn btn-danger" title="Delete"><i class="far fa-trash-alt"></i></a>*@
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" onclick="editCategory(@item.ID);" class="btn btn-primary btn-group-sm" title="Edit" data-toggle="modal" data-target="#MyModal"><i class="far fa-edit"></i></button>
+                    <span style="padding:3px"></span>
+                    <button type="button" onclick="deleteCategory(@item.ID);" class="btn btn-danger btn-group-sm " title="Delete" data-toggle="modal" data-target="#myModal"><i class="far fa-trash-alt"></i></button>
+
+                </td>
+
+            </tr>
+        }
+    </table>
+
+    <!-- Add Category Modal -->
+    <div class="modal fade" id="MYModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                    <h4 class="modal-title" style="font-size:xx-large; font-family:'Segoe UI'"><i class="fas fa-folder-plus"></i></h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-3">
+                           
+                        </div>
+                        <div class="col-6">
+                           
+                                <input type="text" id="Cname" style="font-family:'Segoe UI'" class=" form-control" placeholder="Category Name" required />
+                           
+                        </div>
+                        <div class="col-3">
+                           
+                        </div>
+                    </div>
+
+                  
+
+                </div>
+
+                <div class="modal-footer">
+                    <button id="btn" type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="hidden" id="id" value="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                    <h4 class="modal-title" style="font-size:xx-large"><i style="color:#FFDD00" class="fas fa-exclamation-triangle"></i></h4>
+                </div>
+                <div class="modal-body">
+                    <p style="font-family:'Segoe UI'; font-size:large; text-align:center">Are you sure you want to delete <span style="font-weight:bold" id="name"></span> category?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="delbtn" type="button" class="btn btn-success btn-group-lg" data-dismiss="modal" title="Yes">Yes <i class="fas fa-thumbs-up"></i></button>
+                    <button type="button" class="btn btn-danger btn-group-lg" data-dismiss="modal" title="No">No <i class="fas fa-thumbs-down"></i></button>
+                    <input type="hidden" id="hidden" value="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="MyModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                    <h4 class="modal-title" style="font-size:xx-large; font-family:'Segoe UI'"><i style="color:#FFDD00" class="fas fa-exclamation-circle"></i></h4>
+                </div>
+                <div class="modal-body ">
+
+
+                    <div class="row">
+                      
+                        <div class="col-4" style="padding:5px; text-align:right">
+                            Category Name:
+                        </div>
+                        <div class="col-5">
+
+                            <input type="text" id="editCname" class="form-control"  required />
+
+                        </div>
+                        <div class="col-3">
+
+                        </div>
+                    </div>
+                  
+                    
+                </div>
+                <div class="modal-footer">
+                    <button id="submit" type="button" class="btn btn-success" data-dismiss="modal">Save Changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="hidden" id="id" value="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("#btn").click(function () {
+
+
+        var cname = $("#Cname").val()
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/AddCategories',
+            data: {
+                "cname": cname
+
+            },
+            success: function (data) {
+
+                $("#Cname").val("")
+
+                alert(data);
+                window.location.href = "/Categories/categories";
+            },
+
+            error: function (x, e) { }
+
+
+
+        })
+
+    })
+
+    $("#delbtn").click(function () {
+        var id = $("#hidden").val()
+       
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/Delete',
+            data: {
+                "id": id
+
+
+
+
+            },
+            success: function (data) {
+
+
+                alert(data);
+                window.location.href = "/Categories/categories";
+            },
+
+            error: function (x, e) { }
+
+
+
+        })
+    })
+
+    $("#submit").click(function () {
+      
+        var cname = $("#editCname").val()
+
+        var id = $("#id").val()
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/Update',
+            data: {
+                "cname": cname,
+                "id": id
+            },
+            success: function (data) {
+
+                //$("#Cname").val("")
+
+                alert(data);
+                window.location.href = "/Categories/categories";
+            },
+            error: function (x, e) {
+
+            }
+        });
+
+
+    })
+
+    function deleteCategory(id) {
+
+        $("#hidden").val(id);
+
+        //var id = $("#id").val()
+
+        //alert(id)
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/GetCategory',
+            data: {
+                "CategoryId": id,
+
+            },
+            success: function (data) {
+                console.log(data);
+
+                $("#name").text(data.CategoryName);
+            },
+            error: function (x, e) {
+
+            }
+        });
+    }
+
+    function editCategory(id) {
+
+        $("#id").val(id);
+
+        //var id = $("#id").val()
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/GetCategory',
+            data: {
+                "CategoryId": id,
+                
+            },
+            success: function (data) {
+                console.log(data);
+
+                $("#editCname").val(data.CategoryName);
+            },
+            error: function (x, e) {
+
+            }
+        });
+
+    }
+</script>

@@ -1,0 +1,51 @@
+﻿@model OnlineStore.Models.Category
+@{
+    ViewBag.Title = "EditCategories";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Edit Categories</h2><br />
+<h6>Update <b>@Model.CategoryName</b> ?</h6>
+<form id="form">
+    <h5><b>Category Name:</b></h5>
+    <input type="text" id="Cname" class="form-control" value="@Model.CategoryName" style="width:auto" />
+    <button type="submit" id="btn" class="form-control" style="background-color:green; color:white; width:10%">Submit</button>
+    <input type="hidden" id="id" value="@Model.ID" /><br />
+</form>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $("#form").submit(function (e) {
+        e.preventDefault();
+
+        var cname = $("#Cname").val()
+
+        var id = $("#id").val()
+
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "POST",
+            url: '/Categories/Update',
+            data: {
+                "cname": cname,
+                "id": id
+            },
+            success: function (data) {
+
+                $("#Cname").val("")
+
+                alert(data);
+                window.location.href = "/Categories/categories";
+            },
+            error: function (x, e) {
+
+            }
+        });
+
+
+    })
+
+</script>

@@ -1,0 +1,100 @@
+﻿@model OnlineStore.Models.ViewModel
+@{
+    ViewBag.Title = "AddItems";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<link href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<br />
+<br /><br /><h2>Add a new Item here <i class="fa fa-arrow-down" ></i> </h2><br />
+
+<form id="form" enctype="multipart/form-data">
+    @*Name:*@
+    <input type="text" id="name" name="name" class="form-control" style="width:inherit" placeholder="Name"/><br />
+    @*Price:*@
+    <input type="text" id="price" name="price" class="form-control" style="width:inherit" placeholder="Price" /> <br />
+    @*Image:*@
+    <input type="file" id="img" name="imageurl" class="form-control" style="width:auto" placeholder="Insert Image"/><br />
+    @*Item Description:*@
+    <textarea id="desc" name="itemdesc" class="form-control" style="width:40%" placeholder="Item Description"></textarea><br />
+    @*Category ID:*@
+    <select name="catid" id="catid" class="form-control" style="width:auto" >
+        <option value="">Select Category</option>
+
+        @foreach (var category in Model.ctgry)
+        {
+            <option value="@category.ID">@category.CategoryName</option>
+        }
+
+    </select>
+    <br />
+    <select name="available" id="available" class="form-control" style="width:auto">
+        <option value="1">
+            In Stock
+        </option>
+        <option value="2">
+            Out of Stock
+        </option>
+        <option value="3">
+            Awaiting Information
+        </option>
+       
+    </select>
+    <button type="submit" id="btn" class="btn btn-success">Add</button>
+
+</form>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    $("#form").submit(function (e) {
+        e.preventDefault();
+
+        var formdata = new FormData(this)
+
+        //var name = $("#name").val()
+        //var price = $("#price").val()
+        //var img = $("#img").val()
+        //var desc = $("#desc").val()
+        //var catid = $("#catid").val()
+
+
+        $.ajax({
+            //async: false,
+            //cache: false,
+            type: "POST",
+            url: '/Items/Add',
+            data: formdata,
+            //data: {
+            //    "name": name,
+            //    "price": price,
+            //    "imageurl": img,
+            //    "itemdesc": desc,
+            //    "catid": catid
+
+
+
+            //},
+            success: function (data) {
+
+                //$("#name").val("")
+                //$("#price").val("")
+                //$("#img").val("")
+                //$("#desc").val("")
+                //$("#catid").val("")
+
+                alert(data);
+                window.location.href = "/Items/Item";
+            },
+
+            error: function (x, e) { },
+            cache: false,
+            contentType: false,
+            processData: false
+
+
+
+        })
+    })
+
+</script>

@@ -1,0 +1,111 @@
+﻿@model OnlineStore.Models.ViewModel
+@{
+    ViewBag.Title = "EditItems";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br /><br />
+<h2>Edit an Item here</h2><br />
+
+<h6>Update <b>@Model.SingleItem.Name</b>?</h6><br />
+
+<form id="form" enctype="multipart/form-data" method="post">
+    Name:
+    <input type="text" name="name" id="name" class="form-control" style="width:inherit" value="@Model.SingleItem.Name" /><br />
+    Price:
+    <input type="text" id="price" name="price" class="form-control" style="width:inherit" value="@Model.SingleItem.Price" /> <br />
+    Image:<br />
+    <img src="@Model.SingleItem.ImageURL" height="200" />
+    <br />
+    <input type="file" id="imageurl" name="imageurl" class="form-control" style="width:inherit" /><br />
+
+    Item Description:
+    <textarea id="desc" name="itemdesc" class="form-control" style="width:40%">@Model.SingleItem.ItemDescription</textarea><br />
+    Category:
+    <select name="catid" id="catid" class="form-control" style="width:auto" required>
+        <option value="">Select Category</option>
+        @foreach (var list in Model.ctgry)
+        {
+            <option value="@list.ID">@list.CategoryName</option>
+        }
+    </select><br />
+    Availaility:
+    <select name="available" id="available" class="form-control" style="width:auto" required>
+        <option value="">
+            Select Availabilty
+        </option>
+        <option value="1">
+            In Stock
+        </option>
+        <option value="2">
+            Out of Stock
+        </option>
+        <option value="3">
+           Awaiting Information
+        </option>
+
+
+    </select>
+    <input type="hidden" name="id" id="id" value="@Model.SingleItem.ID" />
+
+    <button type="submit" id="btn" class="btn btn-success">Update</button>
+
+</form>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $("#form").submit(function (e) {
+        e.preventDefault();
+        //var id = $("#hidden").val()
+        //var name = $("#name").val()
+        //var price = $("#price").val()
+        //var img = $("#img").val()
+        //var desc = $("#desc").val()
+        //var catid = $("#catid").val()
+
+        var formdata = new FormData(this);
+
+        $.ajax({
+            //async: false,
+            //cache: false,
+            type: "POST",
+            url: '/Items/Update',
+            //data: {
+            //    "id":id,
+            //    "name": name,
+            //    "price": price,
+            //    "imageurl": img,
+            //    "itemdesc": desc,
+            //    "catid": catid
+
+            data: formdata,
+
+
+            success: function (data) {
+
+                if (data == "1") {
+                    alert("Updated Successfuly! Press 'OK' to continue...")
+                    window.location.href = "/Items/Item";
+                }
+                else {
+                    alert(data)
+                }
+
+
+       
+                
+            },
+
+            error: function (x, e) { },
+            cache: false,
+            contentType: false,
+            processData: false
+
+
+        })
+    })
+
+
+</script>
+
+
